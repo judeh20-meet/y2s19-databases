@@ -14,7 +14,7 @@ class Knowledge(Base):
 	# topic of the article. The last column will be
 	# an integer, representing your rating of the article.
 	__tablename__= "Articles"
-	article_url= Column(Integer, primary_key =True)
+	article_url= Column(String, primary_key =True)
 	article_name= Column(String)
 	article_topic= Column(String)
 	article_rating= Column(Integer)
@@ -24,6 +24,3 @@ class Knowledge(Base):
 			"Article Topic: {} \n"
 			"Article Rating: {}").format(
 			self.article_url, self.article_name, self.article_topic, self.article_rating)
-
-Dairy = Knowledge(article_url = "https://en.wikipedia.org/wiki/Cheese", article_name = "Cheese", article_topic = "Cheese", article_rating = 10 )
-print(Dairy)
